@@ -1,34 +1,100 @@
-/* Styling for Calculator app */
-
-.cal {
-    width: 200px;
-    margin: 0 auto;
-    display: flex; 
-    flex-direction: column; 
+body {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #282828;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
-table {
-    width: 100%;
-}
-
-
-td {
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #222222;
     padding: 20px;
-    text-align: center;
-    border: 1px solid #000;
-    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .display {
-    background-color: #333;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #222;
     color: #fff;
-    font-size: 2em;
-    text-align: right;
-    width: 100%;
-    padding-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
-.mc, .percentage, .ce, .c, .Delete, .reciprocal, .square, .square-root, .Division, .multiplication, .subtraction, .addition, .equals {
-    background-color: #ddd;
+.calculator-keys {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.key-row-a {
+    gap: 2px;
+}
+
+.key-row-a,
+.key-row-2,
+.key-row-3,
+.key-row-4,
+.key-row-5 {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 3px;
+}
+.calculator-keys .zero {
+    width: 140px;
+}
+.calculator-keys button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color:  #282828;
+    cursor: pointer;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+.calculator-keys button:hover {
+    background-color: #222;
+}
+.calculator-keys button:active{
+    background-color: #222;
+}
+.calculator-keys .operator {
+    background-color: #ff9500;
+    color: #fff;
+}
+.calculator-keys .operator:hover {
+    background-color: #ffa930;
+}
+.calculator-keys .equal-sign {
+    background-color: #ff9500;
+    color: #fff;
+}
+.calculator-keys .equal-sign:hover {
+    background-color: #ffa930;
+}
+.calculator-keys .all-clear {
+    background-color: #ff3b30;
+    color: #fff;
+}
+.calculator-keys .all-clear:hover {
+    background-color: #ff493e;
 }

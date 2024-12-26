@@ -1,39 +1,28 @@
-// Calculating functionality
-document.addEventListener("DOMContentLoaded", function() {
-    let display = document.querySelector('.display');
-    let buttons = Array.from(document.querySelectorAll('td'));
-    let currentInput = '';
-    let memory = 0;
+// Calculating functionality script
 
-    buttons.map(button => {
-        button.addEventListener('click', (e) => {
-            let value = e.target.innerText;
-            if (value === 'C') {
-                currentInput = '';
-                display.innerText = '0';
-            } else if (value === '=') {
-                try {
-                    currentInput = eval(currentInput);
-                    display.innerText = currentInput;
-                } catch {
-                    display.innerText = 'Error';
-                }
-            } else if (value === 'CE') {
-                currentInput = currentInput.slice(0, -1);
-                display.innerText = currentInput || '0';
-            } else if (value === 'M+') {
-                memory += parseFloat(currentInput);
-            } else if (value === 'M-') {
-                memory -= parseFloat(currentInput);
-            } else if (value === 'MC') {
-                memory = 0;
-            } else if (value === 'MR') {
-                display.innerText = memory;
-                currentInput = memory.toString();
-            } else {
-                currentInput += value;
-                display.innerText = currentInput;
+const display = document.querySelector('.display');
+
+const buttons = document.querySelectorAll('.calculator-keys button');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const value = button.textContent;
+
+        if (value === 'AC') {
+            display.textContent = '0';
+        } else if (value === '=') {
+            try {
+                const input = display.textContent.replace(/×/g, '*').replace(/÷/g, '/');
+                display.textContent = eval(input);
+            } catch (error) {
+                console.error('Error:', error);
+                display.textContent = 'Error';
             }
-        });
+        } else {
+            if (display.textContent === '0' || display.textContent === 'Error') {
+                display.textContent = value;
+            } else {
+                display.textContent += value;
+            }
+        }
     });
 });

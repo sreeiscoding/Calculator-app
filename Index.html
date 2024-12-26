@@ -3,62 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator -Web App</title>
+    <title>Calculator - Web App</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="cal">
-        <table>
-            <tr>
-                <td class="display">0</td>
-            </tr>
-            <tr>
-                <td  class="mc">MC</td>
-                <td class="mc">MR</td>
-                <td class="mc">M+</td>
-                <td class="mc">M-</td>
-                <td class="mc">MS</td>
-                <td class="mc">M</td>
-            </tr>
-            <tr>
-                <td class="percentage">%</td>
-                <td class="ce">CE</td>
-                <td class="c">C</td>
-                <td class="Delete">
-                    <img src="assest/icon-remove.png" width="25" alt="">
-                </td>
-            </tr>
-            <tr>
-                <td class="reciprocal">1/x</td>
-                <td class="square">x2</td>
-                <td class="square-root">2rootX</td>
-                <td class="Division">÷</td>
-            </tr>
-            <tr>
-                <td class="seven">7</td>
-                <td class="eight">8</td>
-                <td class="nine">9</td>
-                <td class="multiplication">×</td>
-            </tr>
-            <tr>
-                <td class="four">4</td>
-                <td class="five">5</td>
-                <td class="six">6</td>
-                <td class="subtraction">−</td>
-            </tr>
-            <tr>
-                <td class="one">1</td>
-                <td class="two">2</td>
-                <td class="three">3</td>
-                <td class="addition">+</td>
-            </tr>
-            <tr>
-                <td class="negative">+/-</td>
-                <td class="zero">0</td>
-                <td class="decimal">.</td>
-                <td class="equals">=</td>
-            </tr>
-        </table>
+    <div class="calculator">
+        <div class="display">0</div>
+        <div class="calculator-keys">
+            <div class="key-row-a">
+                <button class="all-clear">AC</button>
+                <button class="operator">/</button>
+                <button class="operator">×</button>
+                <button class="operator">x²</button>
+            </div>
+            <div class="key-row-2">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operator">-</button>
+            </div>
+            <div class="key-row-3">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operator">+</button>
+            </div>
+            <div class="key-row-4">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operator">%</button>
+            </div>
+            <div class="key-row-5">
+                <button class="zero">0</button>
+                <button class="decimal">.</button>
+                <button class="equal-sign">=</button>
+            </div>
+        </div>
     </div>
 
     <script src="calc.js"></script>
